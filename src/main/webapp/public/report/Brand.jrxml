@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2016-08-10T12:52:10 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Brand" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1017710-9b6b-408d-b161-87214f04d93e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysqljdbc"/>
+	<queryString>
+		<![CDATA[select *from inventory.brand]]>
+	</queryString>
+	<field name="brand_id" class="java.lang.Integer"/>
+	<field name="brand_name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<property name="net.sf.jasperreports.chart.theme" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="30" uuid="ac2e0a93-ad1c-49dc-8322-edc288b226e7"/>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="30" uuid="1bd3c132-0903-48bc-bcaa-9c2044eee939"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Brand Information ]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="0" width="278" height="30" uuid="ffea9198-68ea-4a2b-ae77-7902d288b646"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brand Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="277" height="30" uuid="8c89309b-4ef5-43e1-8214-77844f783353"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brand Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+			<textField>
+				<reportElement x="0" y="0" width="277" height="33" uuid="feb85042-22fe-43fc-8995-96352c0d1b49"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brand_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="0" width="277" height="33" uuid="eb1594d2-dcaa-4137-a4f8-0918f1546568"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brand_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
